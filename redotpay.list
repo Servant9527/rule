@@ -1,6 +1,12 @@
 # RedotPay 分流（自维护）
-# 无公开维护的现成规则集；本文件与原手写规则 DOMAIN-KEYWORD,redotpay 等价：
-# 凡域名含 redotpay 的流量（含全部子域名）命中本集，配合配置行上的 extended-matching 亦可命中 IP 直连流量的 SNI/Host。
-# App 内第三方服务域名（KYC/推送/统计等不带 redotpay 字样的）无公开清单，未收录。
+# 核心: DOMAIN-KEYWORD,redotpay 覆盖全部带 redotpay 字样的域名（官网/API/全部子域名）
+# 2026-10-14 并入社区 geosite 的 redotpay 分类（多仓库镜像一致）中 3 个不带 redotpay 字样的域名：
+#   pod-15-sunco-ws.zendesk.com = App 内客服（Sunco/Zendesk）长连接
+#   rp-static-apne1.s3.ap-northeast-1.amazonaws.com = RedotPay 静态资源桶
+#   xhpjc6-cdn-settings.appsflyersdk.com = AppsFlyer SDK 配置端点
+# 配置行需带 extended-matching（与原手写规则等价）
 
 DOMAIN-KEYWORD,redotpay
+DOMAIN-SUFFIX,pod-15-sunco-ws.zendesk.com
+DOMAIN-SUFFIX,rp-static-apne1.s3.ap-northeast-1.amazonaws.com
+DOMAIN-SUFFIX,xhpjc6-cdn-settings.appsflyersdk.com

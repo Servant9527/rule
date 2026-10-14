@@ -1,7 +1,20 @@
-# Talkatone 需代理部分 -> 策略组 Talkatone
-# 摘自 LOWERTOP Talkatone 模块（与模块同源），2026-10-14
+# Talkatone 分流（单文件版，统一走策略组 Talkatone）
+# 2026-10-14 按 LOWERTOP 模块语义补全：tktn.be 恢复启用；补 tenor.com 与 216.172.154.0/24；xmpp*.tktn.be 与 vm.talkatone.com 已被 tktn.be / talkatone.com 后缀覆盖
 
-DOMAIN-SUFFIX,tenor.com
-DOMAIN-SUFFIX,tktn.at
 DOMAIN-SUFFIX,tktn.be
-DOMAIN-SUFFIX,vm.talkatone.com
+DOMAIN-SUFFIX,tktn.at
+DOMAIN-SUFFIX,talkatone.com
+DOMAIN-SUFFIX,tenor.com
+DOMAIN-SUFFIX,agkn.com
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,inmobi.com
+DOMAIN-SUFFIX,inner-active.mobi
+DOMAIN-SUFFIX,ip-api.com
+DOMAIN-SUFFIX,kochava.com
+DOMAIN-SUFFIX,mobilefuse.com
+IP-CIDR,50.117.27.0/24
+IP-CIDR,63.251.124.0/24
+IP-CIDR,69.46.75.0/24
+IP-CIDR,205.164.56.0/24
+IP-CIDR,216.172.154.0/24

@@ -1,0 +1,6 @@
+# RedotPay 分流（自维护）
+# 无公开维护的现成规则集；本文件与原手写规则 DOMAIN-KEYWORD,redotpay 等价：
+# 凡域名含 redotpay 的流量（含全部子域名）命中本集，配合配置行上的 extended-matching 亦可命中 IP 直连流量的 SNI/Host。
+# App 内第三方服务域名（KYC/推送/统计等不带 redotpay 字样的）无公开清单，未收录。
+
+DOMAIN-KEYWORD,redotpay

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh /etc/rc.common
 # upay-timesync: 开机时从 upay.10010.com 的 HTTP Date 头同步时间
 # 适用场景: 路由器只有停机卡(免流卡)时, NTP (UDP 123) 不通, 但 upay.10010.com 是免流域名可直达
 # 正常流量卡时 NTP 本来就能用, 本脚本不干扰 NTP, 只是多一个对时渠道
@@ -6,8 +6,8 @@
 # 另见 hotplug 脚本 /etc/hotplug.d/iface/99-ntp-sync (WAN 上线时强制 NTP, 已装)
 
 START=99
+STOP=10
 USE_PROCD=1
-PROG=/usr/sbin/upay-timesync-run
 
 start_service() {
     procd_open_instance

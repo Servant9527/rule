@@ -4,14 +4,15 @@
 # 正常流量卡时 NTP 本来就能用, 本脚本不干扰 NTP, 只是多一个对时渠道
 # 安装: 放到 /etc/init.d/upay-timesync, chmod +x, /etc/init.d/upay-timesync enable
 # 另见 hotplug 脚本 /etc/hotplug.d/iface/99-ntp-sync (WAN 上线时强制 NTP, 已装)
+# 注意: 本脚本是 oneshot, 不用 procd, 避免 procd 反复拉起造成每 5 秒跑一次
 
 START=99
 STOP=10
-USE_PROCD=1
 
-start_service() {
-    procd_open_instance
-    procd_set_param command /bin/sh /etc/upay-timesync.sh
-    procd_set_param respawn 0
-    procd_close_instance
+start() {
+    /etc/upay-timesync.sh &
+}
+
+stop() {
+    :
 }

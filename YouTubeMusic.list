@@ -1,5 +1,13 @@
 DOMAIN,music.youtube.com
+DOMAIN-SUFFIX,youtubei.googleapis.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,ytimg.com
+
 USER-AGENT,*YouTubeMusic*
+
 USER-AGENT,*com.google.ios.youtubemusic*
+
 USER-AGENT,YouTubeMusic*
+
 USER-AGENT,com.google.ios.youtubemusic*
